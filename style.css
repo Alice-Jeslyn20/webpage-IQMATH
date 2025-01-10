@@ -83,7 +83,7 @@ body {
   }
   
   .columns::-webkit-scrollbar {
-    display: none; /* Hides scrollbar in Chrome, Edge, and Safari */
+    display: none; 
   }
   
   .card {
