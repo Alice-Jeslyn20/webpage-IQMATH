@@ -210,7 +210,7 @@
 
   <div class="contact-container">
     <h2>Get in Touch</h2>
-    <form action="#" method="POST">
+    <form onsubmit="sendEmail(): reset(): return false;">
       <label for="name">Your Name</label>
       <input type="text" id="name" name="name" placeholder="Enter your name" required>
       
@@ -232,5 +232,21 @@
     <p>&copy; 2025 IQMATH TECHNOLOGIES. All rights reserved.</p>
     <p><a href="contact.html">Get in Touch</a></p>
   </footer>
+  <script src=" https://smtpjs.com/v3/smtp.js"></script>
+  <script>
+    function sendEmail(){
+      Email.send({
+          Host : "smtp.gmail.com",
+          Username : "alicejeslyn894@gmail.com",
+          Password : "Alice@1234",
+          To : 'alicejeslyn781@gmail.com',
+          From : document.getElementById("email").value,
+          Subject : "new contact form enquiry",
+          Body : "And this is the body"
+    }).then(
+    message => alert(message)
+    ); 
+  }
+  </script>
 </body>
 </html>
