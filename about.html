@@ -17,6 +17,7 @@
 
 .navbar {
     display: flex;
+    flex-wrap: wrap;
     align-items: center;
     justify-content: space-between;
     padding: 10px 20px;
@@ -102,7 +103,7 @@
   border-radius: 8px;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
   padding: 20px;
-  flex: 1 1 calc(33.333% - 20px); 
+  flex: 1 1 calc(33.333% - 20px);
   max-width: calc(33.333% - 20px);
   min-width: 250px;
   transition: transform 0.3s ease;
@@ -146,6 +147,83 @@
       text-decoration: none;
     }
 
+    @media (max-width: 768px) {
+    .navbar {
+      flex-direction: column;
+      text-align: center;
+    }
+
+    .topnav {
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 5px;
+    }
+
+    .hero h2 {
+      font-size: 1.5em;
+    }
+
+    .hero p {
+      font-size: 0.9em;
+    }
+
+    .hero a {
+      font-size: 0.9em;
+      padding: 8px 16px;
+    }
+
+    .columns {
+    flex-direction: column; /* Stack the cards in a column */
+  }
+
+    .section h3 {
+      font-size: 1.5em;
+    }
+
+    .section p {
+      font-size: 0.9em;
+    }
+  }
+
+  @media (max-width: 480px) {
+    .logo img {
+      height: 60px;
+    }
+
+    .navbar h1 {
+      font-size: 1.2em;
+    }
+
+    .topnav a {
+      font-size: 12px;
+      padding: 8px 10px;
+    }
+
+    .hero h2 {
+      font-size: 1.2em;
+    }
+
+    .hero p {
+      font-size: 0.8em;
+    }
+
+    .hero a {
+      font-size: 0.8em;
+      padding: 6px 12px;
+    }
+
+    .columns {
+    flex-direction: column; /* Stack the cards in a column */
+  }
+
+    .section h3 {
+      font-size: 1.2em;
+    }
+
+    .section p {
+      font-size: 0.8em;
+    }
+}
 </style>
 </head>
 <body>
